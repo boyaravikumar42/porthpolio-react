@@ -27,7 +27,7 @@ function Header() {
     return (
         <header className="header">
         <div>
-            <a href="#" className="logo" >Ravi Kumar</a>
+            <a href="#" className="logo" >B.Ravi Kumar</a>
         </div>
         <div>
             <i className="fa-solid fa-bars-staggered" id="bar" onClick={(e)=>handleBar(e)}></i>

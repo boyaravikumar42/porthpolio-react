@@ -12,9 +12,9 @@ function About()
             <img src="./assets/one.jpg" alt=""/>
         </motion.div>
         <motion.div
-            initial={{ opacity: 0, x: 150 }}       
-            whileInView={{ opacity: 1, x: 0 }}         
-            transition={{ duration: 1 }} 
+            // initial={{ opacity: 0, x: 150 }}       
+            // whileInView={{ opacity: 1, x: 0 }}         
+            // transition={{ duration: 1 }} 
              className="about-content">
             <h2>About <span>Me</span></h2>
             <h3>Full-stack Developer</h3>

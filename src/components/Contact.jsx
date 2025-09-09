@@ -19,9 +19,9 @@ function Contact(){
         <section className="contact" id="contact">
         <h2 className="heading">Contact <span>Me</span></h2>
         <motion.form
-                initial={{ opacity: 0, x: 100 }}       
-                whileInView={{ opacity: 1, x: 0 }}         
-                transition={{ duration: 1 }} 
+                // initial={{ opacity: 0, x: 100 }}       
+                // whileInView={{ opacity: 1, x: 0 }}         
+                // transition={{ duration: 1 }} 
         action="" className="input-wrapper">
             <div className="input-box">
                 <input type="text" placeholder="Full Name" value={formdata.name} id="name" name="name" onChange={e=>handleChange(e)} required/>

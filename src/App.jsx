@@ -86,21 +86,20 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div style={{width:"100vw",overflowX:"hidden"}}>
       <i
         id="mode"
         className="fa-solid fa-sun"
         style={{
           position: 'fixed',
           top: '90px',
-          right: '5%',
+          right: '10%',
           fontSize: '20px',
           color: '#59b2f4',
           cursor: 'pointer',
         }}
         onClick={toggleTheme}
       ></i>
-      {isLoading && <Loader/>}
       <Header />
       <Home />
       <About />
@@ -110,7 +109,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 

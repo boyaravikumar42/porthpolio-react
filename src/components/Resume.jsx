@@ -85,9 +85,9 @@ const Achievements =[
                 <div className="education skills-wrap">
                     <div>
                         <motion.div
-                        initial={{ opacity: 0, x: 100 }}       
-                        whileInView={{ opacity: 1, x: 0 }}         
-                        transition={{ duration: 1 }} 
+                        // initial={{ opacity: 0, x: 100 }}       
+                        // whileInView={{ opacity: 1, x: 0 }}         
+                        // transition={{ duration: 1 }} 
                          className="item">
                             <div className="content">
                                 <h2><span>Bachelor Of Technology - CSE</span></h2>
@@ -154,9 +154,9 @@ function Certifications({id,name,year,link})
 {
     return ( 
             <motion.div 
-                        initial={{ opacity: 0, x: 100 }}       
-                        whileInView={{ opacity: 1, x: 0 }}         
-                        transition={{ duration: 1 }} 
+                        // initial={{ opacity: 0, x: 100 }}       
+                        // whileInView={{ opacity: 1, x: 0 }}         
+                        // transition={{ duration: 1 }} 
                 className="item">
                        <div className="content">
                         <div className="link">

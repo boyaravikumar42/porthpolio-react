@@ -37,7 +37,7 @@ function Home()
                  className="span text home-h2" style={{display:"inline-block"}}>
                     <Typewriter
                             options={{
-                            strings: ["Full-Stack Developer", "Java Ethusiant", "Web Developer"],
+                            strings: ["Full-Stack Developer", "Java Developer", "Prblem Solver"],
                             autoStart: true,
                             loop: true,
                             }}

@@ -2,53 +2,79 @@ import { motion } from 'framer-motion';
 import React from 'react';
 function Projects()
 {
-    const cards=[
-        {
-            id:1,
-            name:"",
-            desc:["abc","def","jkl"],
-            live:"",
-            code:"",
-            img:""
-        },
-        {
-            id:2,
-            name:"Porth polio Hub",
-            desc:["Developed a portpolio website to showcase my skills in front-end",
-                "ensured a responsive layout for optimal user experience across devices, using CSS media queries and flexible layout",
-                "Added dynamic elements, smooth scrolling and animations using JavaScript"
-                 ],
-            live:"https://boyaravikumar42.github.io/porth-polio/",
-            code:"https://github.com/boyaravikumar42/porth-polio",
-            img:"./assets/porth.png"
-        },
-        {
-            id:3,
-            name:"Student clubs (CISC)",
-            desc:["Designed a website to describe student clubs of CSE Deparment for interaction of students",
-                "Developed using modern web technologies like HTML, CSS and JavaScript",
-                "the project focuses on delivering a user-friendly and responsive interface."],
-            live:"https://boyaravikumar42.github.io/cisk/",
-            code:"https://github.com/boyaravikumar42/cisk",
-            img:"./assets/cisc.png"
-        },
-        {
-            id:4,
-            name:"Mini Calculator",
-            desc:["Developed a mini calculator to perform basic arithematic operations",
-                "Layout and design was developed by using HTML and CSS",
-                "The functionalities of calculator such as arithmatic operations implemented using Javascript"],
-            live:"#",
-            code:"https://github.com/boyaravikumar42/mini-calculator",
-            img:"./assets/calc.png"
-        }
+    const cards = [
+  {
+    id: 1,
+    name: "AI Powered Quiz Generator",
+    desc: [
+      "Implemented quiz generation based on topic/document, difficulty level, and question count with AI support",
+      "Enabled user participation via access code and username along with real-time leaderboard and tie-breaker scoring",
+      "Designed admin features for scheduling quizzes, monitoring live scores, and publishing results"
+    ],
+    live: "#", // add your live link here
+    code: "https://github.com/boyaravikumar42/Quiz-App-with-Gemini-API", // update if needed
+    img: "./assets/quiz.jpg",
+    skills: ["React", "Spring Boot", "MongoDB", "AI Integration"]
+  },
+  {
+    id: 2,
+    name: "Byte Byzaar",
+    desc: [
+      "Developed an e-commerce platform tailored for college students",
+      "Implemented product listing, cart, and checkout functionality",
+      "Ensured responsive UI for mobile and desktop users"
+    ],
+    live: "https://byte-bazaar678.netifly.app", // add your live link here
+    code: "https://github.com/boyaravikumar42/ecommerce-java", // update if needed
+    img: "./assets/byte.png",
+    skills: ["React", "Spring boot", "mySQL", "JWT Authentication"]
+  },
+  {
+    id: 3,
+    name: "Porth polio Hub",
+    desc: [
+      "Developed a portfolio website to showcase my skills in front-end",
+      "Ensured a responsive layout for optimal user experience across devices, using CSS media queries and flexible layout",
+      "Added dynamic elements, smooth scrolling and animations using JavaScript"
+    ],
+    live: "https://boyaravikumar42.github.io/porth-polio/",
+    code: "https://github.com/boyaravikumar42/porth-polio",
+    img: "./assets/porth.png",
+    skills: ["React", "Framer-motion", "CSS", "JavaScript"]
+  },
+  {
+    id: 4,
+    name: "Student clubs (CISC)",
+    desc: [
+      "Designed a website to describe student clubs of CSE Department for interaction of students",
+      "Developed using modern web technologies like HTML, CSS and JavaScript",
+      "The project focuses on delivering a user-friendly and responsive interface."
+    ],
+    live: "https://boyaravikumar42.github.io/cisk/",
+    code: "https://github.com/boyaravikumar42/cisk",
+    img: "./assets/cisc.png",
+    skills: ["HTML", "CSS", "JavaScript", "Responsive Design"]
+  },
+//   {
+//     id: 5,
+//     name: "Mini Calculator",
+//     desc: [
+//       "Developed a mini calculator to perform basic arithmetic operations",
+//       "Layout and design was developed by using HTML and CSS",
+//       "The functionalities of calculator such as arithmetic operations implemented using JavaScript"
+//     ],
+//     live: "#",
+//     code: "https://github.com/boyaravikumar42/mini-calculator",
+//     img: "./assets/calc.png",
+//     skills: ["HTML", "CSS", "JavaScript", "UI Design"]
+//   }
+];
 
-    ]
     return (
         <section className="proj" id="proj">
     <h2 className="heading">Latest <span>Projects</span></h2>
     <div className="proj-wrap">
-        {cards.map((e)=><Card key={e.id} name={e.name} desc={e.desc} live={e.live} code={e.code} img={e.img}/>)}
+        {cards.map((e)=><Card key={e.id} name={e.name} desc={e.desc} live={e.live} code={e.code} img={e.img} skills={e.skills}/>)}
     </div>
 </section>
 
@@ -57,7 +83,7 @@ function Projects()
 export default Projects;
 
 
-function Card({name,desc,live,code,img})
+function Card({name,desc,live,code,img,skills})
 {
     return(
         <motion.div 
@@ -68,16 +94,22 @@ function Card({name,desc,live,code,img})
             <div className="proj-img">
                 <img src={img || "ns.jpeg"} alt=""/>
             </div>
-            <h2>{name}</h2>
+            <div className="proj-content">
+                <h2>{name}</h2>
+                <div><a href={live}><i className="fa fa-external-link-alt social-media"></i></a>
+                &nbsp;&nbsp;
+                <a href={code}><i className="fa-brands fa-github social-media"></i></a></div>
+            </div>
             <ul>
                 <li>{desc[0]}</li>
                  <li>{desc[1]}</li>
                  <li>{desc[2]}</li>
             </ul>
-            <div className="btns">
-                <a href={code} className="btn">github</a>
-                <a href={live} className="btn live">live</a>
-            </div>
+            <div className="skills">
+        {skills?.map((skill, i) => (
+          <span key={i}> #{skill}</span>
+        ))}
+      </div>
         </motion.div>
     )
 }
